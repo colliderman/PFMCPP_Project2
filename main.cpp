@@ -116,55 +116,55 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
- bool startPlaying(bool isPlaying, int numOfLoops, bool isLooping = true)
- {
-     ignoreUnused(isPlaying, isLooping, numOfLoops);
-     return{};
- }
+bool startPlaying(bool isPlaying, int numOfLoops, bool isLooping = true)
+{
+    ignoreUnused(isPlaying, isLooping, numOfLoops);
+    return{};
+}
 
 /*
  2)
  */
- int addNumbers(int num1, int num2)
- {
-     ignoreUnused(num1, num2);
-     return{};
- }
+int addNumbers(int num1, int num2)
+{
+    ignoreUnused(num1, num2);
+    return{};
+}
 
 /*
  3)
  */
- void buttonHandler(bool button1, bool button2)
- {
-     ignoreUnused(button1, button2);
- }
+void buttonHandler(bool button1, bool button2)
+{
+    ignoreUnused(button1, button2);
+}
 
 /*
  4)
  */
- float addDecimals(float num1, float num2, float num3 = 49.9f)
- {
-     ignoreUnused(num1, num2, num3);
-     return{};
- }
+float addDecimals(float num1, float num2, float num3 = 49.9f)
+{
+    ignoreUnused(num1, num2, num3);
+    return{};
+}
 
 /*
  5)
  */
- int setSampleRate(int currentSampleRate, int newSampleRate)
- {
-     ignoreUnused(currentSampleRate, newSampleRate);
-     return {};
- }
+int setSampleRate(int currentSampleRate, int newSampleRate)
+{
+    ignoreUnused(currentSampleRate, newSampleRate);
+    return {};
+}
 
 /*
  6)
  */
- int setRange(int minValue, int maxValue)
- {
-     ignoreUnused(minValue, maxValue);
-     return{};
- }
+int setRange(int minValue, int maxValue)
+{
+    ignoreUnused(minValue, maxValue);
+    return{};
+}
 
 /*
  7)
@@ -177,27 +177,27 @@ void flashLeds(int led1, int led2, int led3)
 /*
  8)
  */
- void setKnobValue(double currentVal, double newVal, double range)
- {
-     ignoreUnused(currentVal, newVal, range);
- }
+void setKnobValue(double currentVal, double newVal, double range)
+{
+    ignoreUnused(currentVal, newVal, range);
+}
 
 /*
  9)
  */
- bool runningOutOfFunctionIdeas(int numFuncsCreated, int numFuncsNeeded, bool ideasRemaining)
- {
-     ignoreUnused(numFuncsCreated, numFuncsNeeded, ideasRemaining);
-     return{};
- }
+bool runningOutOfFunctionIdeas(int numFuncsCreated, int numFuncsNeeded,bool ideasRemaining)
+{
+    ignoreUnused(numFuncsCreated, numFuncsNeeded, ideasRemaining);
+    return{};
+}
 
 /*
  10)
  */
- void throwBall(bool isGoodBoy, int distanceToThrow, bool rightHanded = true)
- {
-     ignoreUnused(isGoodBoy, distanceToThrow, rightHanded);
- }
+void throwBall(bool isGoodBoy, int distanceToThrow, bool rightHanded = true)
+{
+    ignoreUnused(isGoodBoy, distanceToThrow, rightHanded);
+}
  
 
 int main()
@@ -235,15 +235,8 @@ int main()
     //10)
     throwBall(true, 10, true);
     
-    
-    ignoreUnused(carRented);
-    ignoreUnused(playState);
-    ignoreUnused(sum);
-    ignoreUnused(decimalSum);
-    ignoreUnused(sampleRate);
-    ignoreUnused(range);
-    ignoreUnused(hasIdeasLeft);
-    
+    ignoreUnused(carRented, playState, sum, decimalSum, sampleRate, range, hasIdeasLeft);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
