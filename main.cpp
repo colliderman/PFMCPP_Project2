@@ -14,13 +14,11 @@ video: Chapter 2 - Part 3
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
  
- 
- 
- 
- 
- 
- 
- 
+ bool
+ char
+ int
+ float
+ double
  
  
  
@@ -62,10 +60,48 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    bool play = true;
+    bool stop = false;
+    bool loop = 1;
     
+    char a = 'a';
+    char b = 'b';
+    char str[6] = {'s','t','r','i','n','g'};
+
+    int i = 47;
+    unsigned int sampleRate = 44100;
+    int fingersOnHand = 10;
+
+    float decimal = 2.76f;
+    float knobValue = 0.1f;
+    float temperature = 32.0f;
+
+    double percentage = 87.0;
+    double maxValue = 128.0;
+    double minValue = 0.01;
     
-    
+  
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+
+    ignoreUnused(play);
+    ignoreUnused(stop);
+    ignoreUnused(loop);
+    
+    ignoreUnused(a);
+    ignoreUnused(b);
+    ignoreUnused(str);
+
+    ignoreUnused(i);
+    ignoreUnused(sampleRate);
+    ignoreUnused(fingersOnHand);
+
+    ignoreUnused(decimal);
+    ignoreUnused(knobValue);
+    ignoreUnused(temperature);
+
+    ignoreUnused(percentage);
+    ignoreUnused(maxValue);
+    ignoreUnused(minValue);
 }
 /*
  10 functions
@@ -80,42 +116,89 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+bool startPlaying(bool isPlaying, int numOfLoops, bool isLooping = true)
+{
+    ignoreUnused(isPlaying, isLooping, numOfLoops);
+    return{};
+}
 
 /*
  2)
  */
+int addNumbers(int num1, int num2)
+{
+    ignoreUnused(num1, num2);
+    return{};
+}
 
 /*
  3)
  */
+void buttonHandler(bool button1, bool button2)
+{
+    ignoreUnused(button1, button2);
+}
 
 /*
  4)
  */
+float addDecimals(float num1, float num2, float num3 = 49.9f)
+{
+    ignoreUnused(num1, num2, num3);
+    return{};
+}
 
 /*
  5)
  */
+int setSampleRate(int currentSampleRate, int newSampleRate)
+{
+    ignoreUnused(currentSampleRate, newSampleRate);
+    return {};
+}
 
 /*
  6)
  */
+int setRange(int minValue, int maxValue)
+{
+    ignoreUnused(minValue, maxValue);
+    return{};
+}
 
 /*
  7)
  */
+void flashLeds(int led1, int led2, int led3)
+{
+    ignoreUnused(led1, led2, led3);
+}
 
 /*
  8)
  */
+void setKnobValue(double currentVal, double newVal, double range)
+{
+    ignoreUnused(currentVal, newVal, range);
+}
 
 /*
  9)
  */
+bool runningOutOfFunctionIdeas(int numFuncsCreated, int numFuncsNeeded,bool ideasRemaining)
+{
+    ignoreUnused(numFuncsCreated, numFuncsNeeded, ideasRemaining);
+    return{};
+}
 
 /*
  10)
  */
+void throwBall(bool isGoodBoy, int distanceToThrow, bool rightHanded = true)
+{
+    ignoreUnused(isGoodBoy, distanceToThrow, rightHanded);
+}
+ 
 
 int main()
 {
@@ -123,27 +206,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto playState = startPlaying(false, 4, true);
     
     //2)
-    
+    auto sum = addNumbers(42, 67);
+
     //3)
+    buttonHandler(6, 9);
     
     //4)
-    
+    auto decimalSum = addDecimals(3.6f, 4.29f, 16.8f);
+
     //5)
+    auto sampleRate = setSampleRate(44100, 48000);
     
     //6)
+    auto range = setRange(1, 100);
     
     //7)
-    
+    flashLeds(1, 2, 3);
+
     //8)
+    setKnobValue(0.01, 0.72, 1.0);
     
     //9)
+    auto hasIdeasLeft = runningOutOfFunctionIdeas(9, 10, false);
     
     //10)
+    throwBall(true, 10, true);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, playState, sum, decimalSum, sampleRate, range, hasIdeasLeft);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
